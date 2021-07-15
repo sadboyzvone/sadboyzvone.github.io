@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
+import Contact from "../../pages/Contact/Contact";
 import Homepage from "../../pages/Homepage/Homepage";
 import NotFound from "../../pages/NotFound/NotFound";
 import Footer from "../Footer/Footer";
@@ -15,6 +16,7 @@ function PageRouter() {
       <Header />
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
+          <Route path="/contact" exact component={Contact} />
           <Route path="/" exact component={Homepage} />
           <Route component={NotFound} />
         </Switch>

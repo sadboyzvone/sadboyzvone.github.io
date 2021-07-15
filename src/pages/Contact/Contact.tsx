@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
 import React from "react";
-import CallToAction from "../../components/CallToAction/CallToAction";
+import ContactForm from "../../components/ContactForm/ContactForm";
 
-function Homepage() {
+function Contact() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <CallToAction />
+      <ContactForm />
     </motion.div>
   );
 }
 
-export default Homepage;
+export default Contact;
