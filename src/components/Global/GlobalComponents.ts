@@ -5,5 +5,16 @@ export const Body = styled.div`
   width: 100vw;
   height: 100vh;
 
+  display: flex;
+  flex-direction: column;
+
   background-color: ${Global.colors.background.primary};
+
+  & > :nth-child(2) {
+    flex: 1 auto;
+  }
+
+  & > :last-child {
+    flex-shrink: 0;
+  }
 `;
