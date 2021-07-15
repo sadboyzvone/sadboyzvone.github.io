@@ -12,6 +12,9 @@ export const Body = styled.div`
 
   & > :nth-child(2) {
     flex: 1 auto;
+    & > :first-child {
+      height: 100%;
+    }
   }
 
   & > :last-child {
