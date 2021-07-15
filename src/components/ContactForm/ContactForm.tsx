@@ -16,7 +16,7 @@ function ContactForm() {
     <Container>
       <Label>
         <IoMdContact />
-        Contact me
+        <span>Contact me</span>
       </Label>
       <Form>
         <InputContainer>

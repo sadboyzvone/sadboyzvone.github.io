@@ -21,6 +21,11 @@ export const Label = styled.div`
   @media (max-width: ${Global.breakpoints.sm}px) {
     font-size: 2.5rem;
   }
+
+  > span {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+  }
 `;
 
 export const Form = styled.form`

@@ -22,9 +22,14 @@ export const HeadingContainer = styled.div`
   will-change: color, border-bottom-color;
   display: flex;
   align-items: center;
+  font-size: 1.75rem;
   gap: 1rem;
   color: ${Global.colors.text.primary};
   border-bottom: 1px solid ${Global.colors.text.primary};
+
+  & > svg {
+    transform: scale(1.5);
+  }
 
   &:hover {
     color: ${shade(0.3, Global.colors.text.primary)};
@@ -43,6 +48,9 @@ export const HeadingContainer = styled.div`
 export const Heading = styled.h1`
   margin: 0;
   padding: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+
   font-family: ${Global.fonts.heading?.fontFamily};
 `;
 
