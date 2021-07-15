@@ -1,5 +1,5 @@
 import React from "react";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { SiFacebook } from "react-icons/si";
 import { Container } from "../Header/HeaderComponents";
 import {
@@ -38,6 +38,13 @@ function Footer() {
             target="_blank"
           >
             <SiFacebook size="1.8rem" />
+          </SocialMediaLink>
+          <SocialMediaLink
+            href="https://www.instagram.com/prasak.za.pecivo/"
+            rel="noopener nofollow"
+            target="_blank"
+          >
+            <AiFillInstagram size="2.2rem" />
           </SocialMediaLink>
         </SocialMediaContainer>
       </FooterContainer>
