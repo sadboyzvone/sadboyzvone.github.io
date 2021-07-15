@@ -33,9 +33,9 @@ export const HeadingContainer = styled.div`
 
   @media (max-width: ${Global.breakpoints.sm}px) {
     gap: 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     & > svg {
-      transform: scale(2);
+      transform: scale(1.5);
     }
   }
 `;
@@ -58,15 +58,16 @@ export const NavigationItem = styled.div`
   transition: all 300ms ease;
   will-change: color, background-color;
   padding: 0.5rem;
-  border-radius: 0.15rem;
   font-weight: 200;
   font-size: 1rem;
   font-family: ${Global.fonts.navigationItem?.fontFamily};
-  color: ${Global.colors.background.primary};
-  background-color: ${Global.colors.text.primary};
+
+  color: ${Global.colors.text.primary};
+  background-color: transparent;
+  border: 1px solid ${Global.colors.text.primary};
 
   &:hover {
-    color: ${Global.colors.text.primary};
-    background-color: ${lighten(0.1, Global.colors.background.primary)};
+    color: ${Global.colors.background.primary};
+    background-color: ${Global.colors.text.primary};
   }
 `;
