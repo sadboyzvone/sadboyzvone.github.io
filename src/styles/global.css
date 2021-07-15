@@ -6,3 +6,9 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.Toastify__toast-body {
+  font-family: "Zen Loop";
+  font-weight: bold;
+  font-size: 1.5rem;
+}
