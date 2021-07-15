@@ -21,6 +21,7 @@ export const HeadingContainer = styled.div`
   transition: all 300ms ease;
   will-change: color, border-bottom-color;
   display: flex;
+  align-items: center;
   gap: 1rem;
   color: ${Global.colors.text.primary};
   border-bottom: 1px solid ${Global.colors.text.primary};
@@ -28,6 +29,14 @@ export const HeadingContainer = styled.div`
   &:hover {
     color: ${shade(0.3, Global.colors.text.primary)};
     border-bottom: 1px solid ${shade(0.3, Global.colors.text.primary)};
+  }
+
+  @media (max-width: ${Global.breakpoints.sm}px) {
+    gap: 2rem;
+    font-size: 2rem;
+    & > svg {
+      transform: scale(2);
+    }
   }
 `;
 
