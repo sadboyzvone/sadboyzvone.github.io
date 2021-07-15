@@ -28,6 +28,9 @@ export const HeadingContainer = styled.div`
   border-bottom: 1px solid ${Global.colors.text.primary};
 
   & > svg {
+    stroke-width: 10;
+    fill: none;
+    stroke: white;
     transform: scale(1.5);
   }
 
@@ -39,9 +42,6 @@ export const HeadingContainer = styled.div`
   @media (max-width: ${Global.breakpoints.sm}px) {
     gap: 2rem;
     font-size: 1.5rem;
-    & > svg {
-      transform: scale(1.5);
-    }
   }
 `;
 

@@ -11,7 +11,13 @@ export const FooterContainer = styled.div`
   font-family: ${Global.fonts.fontFamily};
 `;
 
-export const CopyrightInformation = styled.div``;
+export const CopyrightInformation = styled.div`
+  font-size: 1rem;
+
+  @media (max-width: ${Global.breakpoints.sm}px) {
+    font-size: 0.5rem;
+  }
+`;
 
 export const SocialMediaContainer = styled.div`
   display: flex;

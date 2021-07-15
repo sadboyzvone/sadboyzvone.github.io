@@ -9,10 +9,6 @@ export const CtaContainer = styled.div`
   left: 50%;
 
   transform: translate(-50%, -50%);
-
-  @media (max-width: ${Global.breakpoints.sm}px) {
-    transform: translate(-50%, -25%);
-  }
 `;
 
 export const CtaText = styled.div`
