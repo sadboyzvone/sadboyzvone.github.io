@@ -1,5 +1,7 @@
-import React from "react";
+import { validate } from "email-validator";
+import React, { useState } from "react";
 import { IoMdContact } from "react-icons/io";
+import { toast } from "react-toastify";
 import {
   Container,
   Form,
@@ -10,8 +12,72 @@ import {
   SubmitButton,
   TextArea,
 } from "./ContactFormComponents";
+import { NotificationType } from "./ContactFormTypes";
 
 function ContactForm() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const createNotification = (
+    message: string,
+    notificationType: NotificationType = NotificationType.INFO
+  ) => {
+    switch (notificationType) {
+      case NotificationType.INFO:
+        toast.info(message);
+        break;
+
+      case NotificationType.ERROR:
+        toast.error(message);
+        break;
+
+      case NotificationType.SUCCESS:
+        toast.success(message);
+        break;
+
+      case NotificationType.WARNING:
+        toast.warning(message);
+        break;
+
+      default:
+        break;
+    }
+  };
+
+  const onSubmitContactForm = async () => {
+    // Check if the name is valid.
+    if (name.length < 1) {
+      createNotification("Please enter your name.", NotificationType.ERROR);
+      return;
+    } else if (!validate(email)) {
+      createNotification(
+        "Please a valid e-mail address.",
+        NotificationType.ERROR
+      );
+      return;
+    } else if (message.length < 1) {
+      createNotification("Please enter a message.", NotificationType.ERROR);
+      return;
+    }
+    setIsSubmitting(true);
+    // TODO: Send the message to the server.
+    if (Math.random() < 0.5) {
+      createNotification(
+        "Your message has been sent.",
+        NotificationType.SUCCESS
+      );
+    } else {
+      createNotification(
+        "A problem occurred while sending the message.",
+        NotificationType.WARNING
+      );
+    }
+    setIsSubmitting(false);
+  };
+
   return (
     <Container>
       <Label>
@@ -21,20 +87,51 @@ function ContactForm() {
       <Form>
         <InputContainer>
           <InputLabel>Name</InputLabel>
-          <Input type="text" />
+          <Input
+            type="text"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+            disabled={isSubmitting}
+          />
         </InputContainer>
 
         <InputContainer>
           <InputLabel>E-mail</InputLabel>
-          <Input type="email" />
+          <Input
+            type="email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+            disabled={isSubmitting}
+          />
         </InputContainer>
 
         <InputContainer>
           <InputLabel>Message</InputLabel>
-          <TextArea rows={3}></TextArea>
+          <TextArea
+            rows={3}
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+            disabled={isSubmitting}
+          ></TextArea>
         </InputContainer>
 
-        <SubmitButton>Send message</SubmitButton>
+        <SubmitButton
+          onClick={(e) => {
+            e.preventDefault();
+            if (!isSubmitting) {
+              onSubmitContactForm();
+            }
+          }}
+          isSubmitting={isSubmitting}
+        >
+          Send message
+        </SubmitButton>
       </Form>
     </Container>
   );

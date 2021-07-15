@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Global } from "../../styles/theme";
+import { ButtonProps } from "./ContactFormTypes";
 
 export const Container = styled.div`
   padding: 1rem;
@@ -69,8 +70,12 @@ export const TextArea = styled.textarea`
   color: ${Global.colors.text.primary};
 `;
 
-export const SubmitButton = styled.div`
-  cursor: pointer;
+export const SubmitButton = styled.div<ButtonProps>`
+  ${(props) =>
+    !props.isSubmitting &&
+    css`
+      cursor: pointer;
+    `}
   margin-top: 5px;
   transition: all 300ms ease;
   will-change: color, background-color;
@@ -84,7 +89,11 @@ export const SubmitButton = styled.div`
   border: 1px solid ${Global.colors.text.primary};
 
   &:hover {
-    color: ${Global.colors.background.primary};
-    background-color: ${Global.colors.text.primary};
+    ${(props) =>
+      !props.isSubmitting &&
+      css`
+        color: ${Global.colors.background.primary};
+        background-color: ${Global.colors.text.primary};
+      `}
   }
 `;

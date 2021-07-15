@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import Contact from "../../pages/Contact/Contact";
 import Homepage from "../../pages/Homepage/Homepage";
 import NotFound from "../../pages/NotFound/NotFound";
@@ -21,6 +22,7 @@ function PageRouter() {
           <Route component={NotFound} />
         </Switch>
       </AnimatePresence>
+      <ToastContainer />
       <Footer />
     </>
   );
