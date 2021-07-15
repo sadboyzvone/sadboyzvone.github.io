@@ -22,7 +22,7 @@ export const Global: ThemeConfiguration = {
     xxl: 1440,
   },
   fonts: {
-    fontFamily: "Helvetica",
+    fontFamily: "Fira Sans",
     heading: {
       fontFamily: "Zen Loop",
     },

@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Homepage from "../../pages/Homepage/Homepage";
+import Footer from "../Footer/Footer";
 import { Body } from "../Global/GlobalComponents";
 import Header from "../Header/Header";
 
@@ -14,6 +15,7 @@ function App() {
             <Homepage />
           </Route>
         </Switch>
+        <Footer />
       </BrowserRouter>
     </Body>
   );
