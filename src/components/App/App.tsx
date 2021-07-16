@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import About from "../../pages/About/About";
 import Contact from "../../pages/Contact/Contact";
 import Homepage from "../../pages/Homepage/Homepage";
 import NotFound from "../../pages/NotFound/NotFound";
@@ -17,6 +18,7 @@ function PageRouter() {
       <Header />
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
+          <Route path="/about" exact component={About} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/" exact component={Homepage} />
           <Route component={NotFound} />

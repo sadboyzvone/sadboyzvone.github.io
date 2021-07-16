@@ -10,7 +10,7 @@ export const Global: ThemeConfiguration = {
       information: "#3E92CC",
       warning: "#F5853F",
       error: "#7A0E00",
-      success: "#98CE00",
+      success: "rgb(16, 204, 82)",
     },
   },
   breakpoints: {
