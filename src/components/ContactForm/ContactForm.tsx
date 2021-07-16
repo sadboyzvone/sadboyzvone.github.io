@@ -65,7 +65,7 @@ function ContactForm() {
       return;
     }
     setIsSubmitting(true);
-    // TODO: Send the message to the server.
+    // Send the message to the server.
     try {
       await axios.post(Pipedream.webhookUrl, {
         name,
