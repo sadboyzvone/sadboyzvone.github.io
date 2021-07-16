@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import Skills from "../../components/Skills/Skills";
 import WorkTimeline from "../../components/WorkTimeline/WorkTimeline";
 
 function About() {
@@ -13,7 +10,10 @@ function About() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <WorkTimeline />
+      <div>
+        <Skills />
+        <WorkTimeline />
+      </div>
     </motion.div>
   );
 }

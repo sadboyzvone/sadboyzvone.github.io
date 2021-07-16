@@ -4,6 +4,7 @@ import { Global } from "../../styles/theme";
 
 export const Container = styled.div`
   padding: 2rem;
+  padding-top: 0;
 `;
 
 export const TimelineElement = styled(VerticalTimelineElement)`
