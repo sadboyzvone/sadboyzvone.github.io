@@ -1,5 +1,5 @@
 Arguments: 
-  /home/zvonimir/.nvm/versions/node/v14.15.1/bin/node /home/zvonimir/.nvm/versions/node/v14.15.1/bin/yarn add react-notifications
+  /home/zvonimir/.nvm/versions/node/v14.15.1/bin/node /home/zvonimir/.nvm/versions/node/v14.15.1/bin/yarn add axios
 
 PATH: 
   /home/zvonimir/.nvm/versions/node/v14.15.1/bin:/home/zvonimir/Scripts/Launchers:/home/zvonimir/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/home/zvonimir/.rvm/bin:/home/zvonimir/.rvm/bin
@@ -27,12 +27,14 @@ npm manifest:
       "serve": "vite preview"
     },
     "dependencies": {
+      "email-validator": "^2.0.4",
       "framer-motion": "^4.1.17",
       "polished": "^4.1.3",
       "react": "^17.0.0",
       "react-dom": "^17.0.0",
       "react-icons": "^4.2.0",
       "react-router-dom": "^5.2.0",
+      "react-toastify": "^7.0.4",
       "react-tsparticles": "^1.31.2",
       "styled-components": "^5.3.0",
       "tsparticles": "^1.31.1"
@@ -454,6 +456,11 @@ Lockfile:
       escape-string-regexp "^1.0.5"
       supports-color "^5.3.0"
   
+  clsx@^1.1.1:
+    version "1.1.1"
+    resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
+    integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
+  
   color-convert@^1.9.0:
     version "1.9.3"
     resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
@@ -508,6 +515,11 @@ Lockfile:
     version "1.3.776"
     resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.776.tgz#33f6e2423b61f1bdaa8d2a103aae78a09764a75f"
     integrity sha512-V0w7eFSBoFPpdw4xexjVPZ770UDZIevSwkkj4W97XbE3IsCsTRFpa7/yXGZ88EOQAUEA09JMMsWK0xsw0kRAYw==
+  
+  email-validator@^2.0.4:
+    version "2.0.4"
+    resolved "https://registry.yarnpkg.com/email-validator/-/email-validator-2.0.4.tgz#b8dfaa5d0dae28f1b03c95881d904d4e40bfe7ed"
+    integrity sha512-gYCwo7kh5S3IDyZPLZf6hSS0MnZT8QmJFqYvbqlDZSbwdZlY6QZWxJ4i/6UhITOJ4XzyI647Bm2MXKCLqnJ4nQ==
   
   esbuild@^0.12.8:
     version "0.12.15"
@@ -798,6 +810,13 @@ Lockfile:
       react-is "^16.6.0"
       tiny-invariant "^1.0.2"
       tiny-warning "^1.0.0"
+  
+  react-toastify@^7.0.4:
+    version "7.0.4"
+    resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-7.0.4.tgz#7d0b743f2b96f65754264ca6eae31911a82378db"
+    integrity sha512-Rol7+Cn39hZp5hQ/k6CbMNE2CKYV9E5OQdC/hBLtIQU2xz7DdAm7xil4NITQTHR6zEbE5RVFbpgSwTD7xRGLeQ==
+    dependencies:
+      clsx "^1.1.1"
   
   react-tsparticles@^1.31.2:
     version "1.31.2"

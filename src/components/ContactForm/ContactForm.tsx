@@ -1,3 +1,4 @@
+import axios from "axios";
 import { validate } from "email-validator";
 import React, { useState } from "react";
 import { IoMdContact } from "react-icons/io";
@@ -12,6 +13,7 @@ import {
   SubmitButton,
   TextArea,
 } from "./ContactFormComponents";
+import { Pipedream } from "./ContactFormConstants";
 import { NotificationType } from "./ContactFormTypes";
 
 function ContactForm() {
@@ -64,14 +66,20 @@ function ContactForm() {
     }
     setIsSubmitting(true);
     // TODO: Send the message to the server.
-    if (Math.random() < 0.5) {
+    try {
+      await axios.post(Pipedream.webhookUrl, {
+        name,
+        email,
+        message,
+      });
+
       createNotification(
         "Your message has been sent.",
         NotificationType.SUCCESS
       );
-    } else {
+    } catch {
       createNotification(
-        "A problem occurred while sending the message.",
+        "A problem has occurred while sending the message.",
         NotificationType.WARNING
       );
     }
