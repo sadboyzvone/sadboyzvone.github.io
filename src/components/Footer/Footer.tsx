@@ -1,8 +1,8 @@
 import React from "react";
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { SiFacebook } from "react-icons/si";
-import { Container } from "../Header/HeaderComponents";
 import {
+  Container,
   CopyrightInformation,
   FooterContainer,
   SocialMediaContainer,

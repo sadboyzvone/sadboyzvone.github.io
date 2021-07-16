@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { Container } from "../../components/Header/HeaderComponents";
 import NotFoundContent from "../../components/NotFoundContent/NotFoundContent";
+import { Container } from "../../components/NotFoundContent/NotFoundContentComponents";
 
 function NotFound() {
   return (

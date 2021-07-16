@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { lighten, shade } from "polished";
+import { shade } from "polished";
 import { Global } from "../../styles/theme";
 
 export const Container = styled.div`
+  border-bottom: 1px solid ${Global.colors.text.primary};
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -25,12 +26,11 @@ export const HeadingContainer = styled.div`
   font-size: 1.75rem;
   gap: 1rem;
   color: ${Global.colors.text.primary};
-  border-bottom: 1px solid ${Global.colors.text.primary};
 
   & > svg {
     stroke-width: 10;
     fill: none;
-    stroke: white;
+    stroke: ${Global.colors.text.primary};
     transform: scale(1.5);
   }
 

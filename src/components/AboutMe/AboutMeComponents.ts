@@ -1,15 +1,20 @@
 import styled from "styled-components";
 import { Global } from "../../styles/theme";
 
+export const PageContainer = styled.div`
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100vh - 168px) !important;
+`;
+
 export const Container = styled.div`
   padding: 2rem;
   border-bottom: 1px solid ${Global.colors.text.primary};
 `;
 
-export const SkillsLabel = styled.div`
+export const AboutLabel = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   font-family: ${Global.fonts.fontFamily};
   font-size: 3rem;
@@ -22,32 +27,15 @@ export const SkillsLabel = styled.div`
   }
 
   & > span {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 100;
   }
 `;
 
-export const SkillIconsContainer = styled.div`
-  margin-top: 0.5rem;
-  color: ${Global.colors.text.primary};
+export const AboutText = styled.div`
   font-family: ${Global.fonts.fontFamily};
-  font-size: 5rem;
-  gap: 0.5rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  flex-wrap: wrap;
-`;
-
-export const SkillContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  align-items: center;
-
-  & > span {
-    font-size: 0.75rem;
-  }
+  font-size: 2rem;
+  font-weight: 100;
+  color: ${Global.colors.text.primary};
+  font-style: italic;
 `;

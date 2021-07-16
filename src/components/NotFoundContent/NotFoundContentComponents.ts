@@ -2,6 +2,21 @@ import { lighten } from "polished";
 import styled from "styled-components";
 import { Global } from "../../styles/theme";
 
+export const Container = styled.div`
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & > a {
+    text-decoration: none;
+  }
+
+  @media (max-width: ${Global.breakpoints.sm}px) {
+    gap: 1rem;
+    flex-direction: column;
+  }
+`;
+
 export const NotFoundContentContainer = styled.div`
   display: flex;
   flex-direction: column;

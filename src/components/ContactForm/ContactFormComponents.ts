@@ -25,7 +25,13 @@ export const Label = styled.div`
 
   > span {
     color: transparent;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 1px ${Global.colors.text.primary};
+  }
+
+  & > svg {
+    stroke-width: 10;
+    fill: none;
+    stroke: ${Global.colors.text.primary};
   }
 `;
 
