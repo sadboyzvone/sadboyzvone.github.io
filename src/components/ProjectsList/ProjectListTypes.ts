@@ -1,12 +1,11 @@
 export type Technology = {
-  Name?: string;
-  Icon?: any;
+  Icon: any;
 };
 
 export type Project = {
   Name: string;
   Client: string;
-  Year: number;
+  Year: string;
   Image?: any;
   Description?: string;
   Testimonial?: string;

@@ -1,17 +1,38 @@
-import { DiDrupal, DiJavascript1, DiPhp, DiReact } from "react-icons/di";
+import {
+  DiCss3,
+  DiDrupal,
+  DiJavascript1,
+  DiMysql,
+  DiPhp,
+  DiReact,
+  DiSass,
+} from "react-icons/di";
 import { Project } from "./ProjectListTypes";
 
 import RaiseYourDivision from "../../images/raiseyourdivision.png";
+import LoLBoostElo from "../../images/lolboostelo.png";
+import MSPFContent from "../../images/mspfcontest.png";
+import IndieScreening from "../../images/indiescreening.png";
 
 export const Projects: Project[] = [
   {
     Name: "IndieScreening",
     Client: "Dr. Dale Okorodudu",
-    Year: 2020,
+    Description: `IndieScreening is an online screening platform built for filmmakers. 
+    It provides an easy way for filmmakers to sell their movies online.
+    Users who want to organize screenings of their favorite movies can do so easily as well.`,
+    Year: "Oct. 2020",
+    Image: IndieScreening,
     URL: "https://indiescreening.com/",
     Technologies: [
       {
         Icon: DiDrupal,
+      },
+      {
+        Icon: DiJavascript1,
+      },
+      {
+        Icon: DiSass,
       },
     ],
   },
@@ -22,12 +43,18 @@ export const Projects: Project[] = [
     It features multiple calculators that are separated by tabs. 
     Payment is handled via PayPal and there is even a live chat option. 
     Boosting is when you pay someone else to play a game for you in order to increase your in-game rank.`,
-    Year: 2020,
+    Year: "Sep. 2020",
     Image: RaiseYourDivision,
     URL: "https://raiseyourdivision.com/",
     Technologies: [
       {
         Icon: DiReact,
+      },
+      {
+        Icon: DiSass,
+      },
+      {
+        Icon: DiPhp,
       },
     ],
     Testimonial: `Zvonimir created a really good looking website for me, although I must admit that I wasn't sure what it should look like. 
@@ -36,7 +63,32 @@ export const Projects: Project[] = [
   {
     Name: "lolboostelo.net",
     Client: "Nebojša Popović",
-    Year: 2019,
+    Description: `LoLBoostElo is a website that provides "boosting services" for a popular MOBA game League of Legends. 
+    Boosting is when you pay someone else to play a game for you in order to increase your in-game rank.`,
+    Year: "Oct. 2019",
+    Image: LoLBoostElo,
+    Technologies: [
+      {
+        Icon: DiPhp,
+      },
+      {
+        Icon: DiCss3,
+      },
+      {
+        Icon: DiJavascript1,
+      },
+    ],
+    Testimonial: `When I hired Zvonimir I didn't expect him to be that quick. 
+    He was easy to communicate with and was ready to answer any questions I had.`,
+  },
+  {
+    Name: "Miami Street Photography Contest 2017",
+    Client: "Juan Jose Reyes",
+    Description: `The Miami Street Photography Festival is an international street photography festival showcasing the best of contemporary street and documentary photography.
+    Established in 2012, it is the largest and leading street photography festival in the world.`,
+    Year: "Sep. 2017",
+    Image: MSPFContent,
+    URL: "https://www.miamistreetphotographyfestival.org/",
     Technologies: [
       {
         Icon: DiPhp,
@@ -44,6 +96,14 @@ export const Projects: Project[] = [
       {
         Icon: DiJavascript1,
       },
+      {
+        Icon: DiCss3,
+      },
+      {
+        Icon: DiMysql,
+      },
     ],
+    Testimonial: `I highly recommend Zvonimir. He upgraded our website in a very timely manner and it works great. 
+    He is a highly knowledgeable and skilled developer and I would recommend him.`,
   },
 ];

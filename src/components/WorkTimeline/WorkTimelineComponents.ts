@@ -33,7 +33,16 @@ export const TimelineElement = styled(VerticalTimelineElement)`
       width: 100%;
     }
 
-    & > div {
+    & > .technologies {
+      display: flex;
+      justify-content: center;
+      font-size: 3rem;
+      border-top: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    & > div:last-child {
       margin-top: 1rem;
       padding-top: 1rem;
       border-top: 1px solid ${Global.colors.text.primary};

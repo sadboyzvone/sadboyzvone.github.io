@@ -50,6 +50,12 @@ function ProjectItem({ project }: { project: Project }) {
       <h4 className="vertical-timeline-element-subtitle">{project.Client}</h4>
       <p>
         {project.Image && <img src={project.Image} alt={project.Name} />}
+        <div className="technologies">
+          {project.Technologies &&
+            project.Technologies.map((t) => {
+              return React.createElement(t.Icon);
+            })}
+        </div>
         {project.Description}
         {project.Testimonial && (
           <div>
