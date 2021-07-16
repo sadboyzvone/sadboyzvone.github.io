@@ -58,10 +58,14 @@ var e,t,n;import{q as a,R as l,G as r,D as i,S as o,a as c,b as m,c as s,d,e as 
     display: flex;
     align-items: center;
 
-    height: 100%;
+    height: calc(100vh - 172px);
+
+    @media (max-width: ${ae.sm}px) {
+      height: calc(100vh - 274px) !important;
+    }
 
     & > canvas {
-      max-height: calc(100vh - 200px);
+      height: 100%;
     }
   }
 
@@ -282,6 +286,10 @@ var e,t,n;import{q as a,R as l,G as r,D as i,S as o,a as c,b as m,c as s,d,e as 
   font-size: 3rem;
   text-align: center;
   color: ${ne.text.primary};
+
+  @media (max-width: ${ae.sm}px) {
+    font-size: 2rem;
+  }
 `,Me=a.div`
   font-family: ${le.fontFamily};
   text-align: center;
@@ -304,6 +312,10 @@ var e,t,n;import{q as a,R as l,G as r,D as i,S as o,a as c,b as m,c as s,d,e as 
       color: ${ne.background.primary};
       background-color: ${ne.text.primary};
     }
+  }
+
+  @media (max-width: ${ae.sm}px) {
+    font-size: 1rem;
   }
 `;function Ue(){return l.createElement(Le,null,l.createElement(O,{width:"100%",options:{fpsLimit:60,interactivity:{detectsOn:"canvas",events:{onClick:{enable:!0,mode:"push"},onHover:{enable:!0,mode:"repulse"},resize:!0},modes:{bubble:{distance:400,duration:2,opacity:.8,size:40},push:{quantity:4},repulse:{distance:200,duration:.4}}},particles:{color:{value:"#ffffff"},links:{color:"#ffffff",distance:150,enable:!0,opacity:.5,width:1},collisions:{enable:!0},move:{direction:"none",enable:!0,outMode:"bounce",random:!1,speed:6,straight:!1},number:{density:{enable:!0,value_area:800},value:80},opacity:{value:.5},shape:{type:"circle"},size:{random:!0,value:5}},detectRetina:!0}}),l.createElement(Ae,null,l.createElement(Oe,null,"Need to boost your online presence?"),l.createElement(Me,null,l.createElement(F,{to:"/contact"},"Let's talk."))))}function Be(){return l.createElement(C.div,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0}},l.createElement(Ue,null))}const qe=a.div`
   padding: 1rem;
@@ -369,18 +381,28 @@ var e,t,n;import{q as a,R as l,G as r,D as i,S as o,a as c,b as m,c as s,d,e as 
 `,et=a.div`
   font-size: 1rem;
 
-  @media (max-width: ${ae.sm}px) {
-    font-size: 0.5rem;
+  @media (max-width: 483px) {
+    font-size: 0.75rem;
   }
 `,tt=a.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
+  @media (max-width: ${ae.sm}px) {
+    gap: 0;
+  }
 `,nt=a.a`
   color: ${ne.text.primary};
 
   &:hover {
     color: ${W(.3,ne.text.primary)};
+  }
+
+  @media (max-width: ${ae.sm}px) {
+    & > svg {
+      transform: scale(0.85);
+    }
   }
 `;function at(){return l.createElement(Ke,null,l.createElement(Xe,null,l.createElement(et,null,"Zvonimir Rudinski © ",(new Date).getFullYear()," All rights reserved."),l.createElement(tt,null,l.createElement(nt,{href:"https://github.com/sadboyzvone",rel:"noopener nofollow",target:"_blank"},l.createElement(Y,{size:"2rem"})),l.createElement(nt,{href:"https://www.linkedin.com/in/zvonimirr/",rel:"noopener nofollow",target:"_blank"},l.createElement(G,{size:"2rem"})),l.createElement(nt,{href:"https://www.facebook.com/rudinskiz/",rel:"noopener nofollow",target:"_blank"},l.createElement(H,{size:"1.8rem"})),l.createElement(nt,{href:"https://www.instagram.com/prasak.za.pecivo/",rel:"noopener nofollow",target:"_blank"},l.createElement(J,{size:"2.2rem"})))))}const lt=a.div`
   border-bottom: 1px solid ${ne.text.primary};
