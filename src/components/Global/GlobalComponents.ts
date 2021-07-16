@@ -1,6 +1,16 @@
 import styled from "styled-components";
 import { Global } from "../../styles/theme";
 
+export const PageContainer = styled.div`
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100vh - 168px) !important;
+
+  @media (max-width: ${Global.breakpoints.sm}px) {
+    height: calc(100vh - 212px) !important;
+  }
+`;
+
 export const Body = styled.div`
   min-height: 100vh;
 

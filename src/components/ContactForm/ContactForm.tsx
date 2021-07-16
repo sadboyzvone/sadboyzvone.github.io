@@ -3,6 +3,7 @@ import { validate } from "email-validator";
 import React, { useState } from "react";
 import { IoMdContact } from "react-icons/io";
 import { toast } from "react-toastify";
+import { PageContainer } from "../Global/GlobalComponents";
 import {
   Container,
   Form,
@@ -87,61 +88,63 @@ function ContactForm() {
   };
 
   return (
-    <Container>
-      <Label>
-        <IoMdContact />
-        <span>Contact me</span>
-      </Label>
-      <Form>
-        <InputContainer>
-          <InputLabel>Name</InputLabel>
-          <Input
-            type="text"
-            value={name}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-            disabled={isSubmitting}
-          />
-        </InputContainer>
+    <PageContainer>
+      <Container>
+        <Label>
+          <IoMdContact />
+          <span>Contact me</span>
+        </Label>
+        <Form>
+          <InputContainer>
+            <InputLabel>Name</InputLabel>
+            <Input
+              type="text"
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+              disabled={isSubmitting}
+            />
+          </InputContainer>
 
-        <InputContainer>
-          <InputLabel>E-mail</InputLabel>
-          <Input
-            type="email"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            disabled={isSubmitting}
-          />
-        </InputContainer>
+          <InputContainer>
+            <InputLabel>E-mail</InputLabel>
+            <Input
+              type="email"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              disabled={isSubmitting}
+            />
+          </InputContainer>
 
-        <InputContainer>
-          <InputLabel>Message</InputLabel>
-          <TextArea
-            rows={3}
-            value={message}
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
-            disabled={isSubmitting}
-          ></TextArea>
-        </InputContainer>
+          <InputContainer>
+            <InputLabel>Message</InputLabel>
+            <TextArea
+              rows={3}
+              value={message}
+              onChange={(e) => {
+                setMessage(e.target.value);
+              }}
+              disabled={isSubmitting}
+            ></TextArea>
+          </InputContainer>
 
-        <SubmitButton
-          onClick={(e) => {
-            e.preventDefault();
-            if (!isSubmitting) {
-              onSubmitContactForm();
-            }
-          }}
-          isSubmitting={isSubmitting}
-        >
-          Send message
-        </SubmitButton>
-      </Form>
-    </Container>
+          <SubmitButton
+            onClick={(e) => {
+              e.preventDefault();
+              if (!isSubmitting) {
+                onSubmitContactForm();
+              }
+            }}
+            isSubmitting={isSubmitting}
+          >
+            Send message
+          </SubmitButton>
+        </Form>
+      </Container>
+    </PageContainer>
   );
 }
 

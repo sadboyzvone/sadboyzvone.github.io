@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import AboutMe from "../../components/AboutMe/AboutMe";
-import { PageContainer } from "../../components/AboutMe/AboutMeComponents";
+import { PageContainer } from "../../components/Global/GlobalComponents";
 import Skills from "../../components/Skills/Skills";
 import WorkTimeline from "../../components/WorkTimeline/WorkTimeline";
 

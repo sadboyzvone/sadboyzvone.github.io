@@ -39,7 +39,7 @@ export const HeadingContainer = styled.div`
     border-bottom: 1px solid ${shade(0.3, Global.colors.text.primary)};
   }
 
-  @media (max-width: ${Global.breakpoints.sm}px) {
+  @media (max-width: ${Global.breakpoints.md}px) {
     gap: 2rem;
     font-size: 1.5rem;
   }
