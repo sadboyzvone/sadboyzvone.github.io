@@ -30,8 +30,8 @@ export const FooterContainer = styled.div`
 export const CopyrightInformation = styled.div`
   font-size: 1rem;
 
-  @media (max-width: ${Global.breakpoints.sm}px) {
-    font-size: 0.5rem;
+  @media (max-width: 483px) {
+    font-size: 0.75rem;
   }
 `;
 
@@ -39,6 +39,10 @@ export const SocialMediaContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
+  @media (max-width: ${Global.breakpoints.sm}px) {
+    gap: 0;
+  }
 `;
 
 export const SocialMediaLink = styled.a`
@@ -46,5 +50,11 @@ export const SocialMediaLink = styled.a`
 
   &:hover {
     color: ${shade(0.3, Global.colors.text.primary)};
+  }
+
+  @media (max-width: ${Global.breakpoints.sm}px) {
+    & > svg {
+      transform: scale(0.85);
+    }
   }
 `;

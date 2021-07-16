@@ -36,10 +36,14 @@ export const Body = styled.div`
     display: flex;
     align-items: center;
 
-    height: 100%;
+    height: calc(100vh - 172px);
+
+    @media (max-width: ${Global.breakpoints.sm}px) {
+      height: calc(100vh - 274px) !important;
+    }
 
     & > canvas {
-      max-height: calc(100vh - 200px);
+      height: 100%;
     }
   }
 

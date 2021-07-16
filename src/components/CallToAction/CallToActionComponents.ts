@@ -16,6 +16,10 @@ export const CtaText = styled.div`
   font-size: 3rem;
   text-align: center;
   color: ${Global.colors.text.primary};
+
+  @media (max-width: ${Global.breakpoints.sm}px) {
+    font-size: 2rem;
+  }
 `;
 
 export const CtaButton = styled.div`
@@ -40,5 +44,9 @@ export const CtaButton = styled.div`
       color: ${Global.colors.background.primary};
       background-color: ${Global.colors.text.primary};
     }
+  }
+
+  @media (max-width: ${Global.breakpoints.sm}px) {
+    font-size: 1rem;
   }
 `;
