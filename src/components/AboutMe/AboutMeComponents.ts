@@ -1,12 +1,6 @@
 import styled from "styled-components";
 import { Global } from "../../styles/theme";
 
-export const PageContainer = styled.div`
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: calc(100vh - 168px) !important;
-`;
-
 export const Container = styled.div`
   padding: 2rem;
   border-bottom: 1px solid ${Global.colors.text.primary};
@@ -35,7 +29,7 @@ export const AboutLabel = styled.div`
 export const AboutText = styled.div`
   font-family: ${Global.fonts.fontFamily};
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 200;
   color: ${Global.colors.text.primary};
   font-style: italic;
 `;

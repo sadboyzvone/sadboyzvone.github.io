@@ -9,9 +9,39 @@ export const Container = styled.div`
 
 export const TimelineElement = styled(VerticalTimelineElement)`
   font-family: ${Global.fonts.fontFamily};
-
+  & > div > h3 > a {
+    transition: all 300ms ease;
+    will-change: color, background-color;
+    text-decoration: none;
+    color: ${Global.colors.text.primary};
+    font-weight: 200;
+    border: 1px solid ${Global.colors.text.primary};
+    display: block;
+    padding: 0.25rem;
+    width: max-content;
+    margin-bottom: 0.5rem;
+    &:hover {
+      background-color: ${Global.colors.text.primary};
+      color: ${Global.colors.background.primary};
+    }
+  }
   & > div > p {
-    font-weight: 300;
+    margin-top: 0.5rem;
+    font-weight: 400;
+
+    & > img {
+      width: 100%;
+    }
+
+    & > div {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid ${Global.colors.text.primary};
+      & > span {
+        font-style: italic;
+        font-weight: 200;
+      }
+    }
   }
 `;
 
