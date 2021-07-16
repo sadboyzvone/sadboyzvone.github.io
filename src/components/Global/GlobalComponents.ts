@@ -5,6 +5,8 @@ export const PageContainer = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
   height: calc(100vh - 168px) !important;
+  scrollbar-color: #33333391 transparent;
+  scrollbar-width: thin;
 
   @media (max-width: ${Global.breakpoints.sm}px) {
     height: calc(100vh - 212px) !important;
