@@ -7,8 +7,9 @@ export const CtaContainer = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
+  height: 100%;
 
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -10%);
 `;
 
 export const CtaText = styled.div`
