@@ -19,6 +19,7 @@ export const TimelineElement = styled(VerticalTimelineElement)`
     display: block;
     padding: 0.25rem;
     width: max-content;
+    max-width: 100%;
     margin-bottom: 0.5rem;
     &:hover {
       background-color: ${Global.colors.text.primary};
