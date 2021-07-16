@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { shade } from "polished";
+import { darken, shade } from "polished";
 import { Global } from "../../styles/theme";
 
 export const Container = styled.div`
@@ -20,7 +20,7 @@ export const Container = styled.div`
 
 export const HeadingContainer = styled.div`
   transition: all 300ms ease;
-  will-change: color, border-bottom-color;
+  will-change: color;
   display: flex;
   align-items: center;
   font-size: 1.75rem;
@@ -35,8 +35,13 @@ export const HeadingContainer = styled.div`
   }
 
   &:hover {
-    color: ${shade(0.3, Global.colors.text.primary)};
-    border-bottom: 1px solid ${shade(0.3, Global.colors.text.primary)};
+    & > svg {
+      fill: ${Global.colors.text.primary};
+    }
+
+    & > h1 {
+      color: ${Global.colors.text.primary};
+    }
   }
 
   @media (max-width: ${Global.breakpoints.md}px) {
@@ -50,7 +55,6 @@ export const Heading = styled.h1`
   padding: 0;
   color: transparent;
   -webkit-text-stroke: 1px white;
-
   font-family: ${Global.fonts.heading?.fontFamily};
 `;
 
